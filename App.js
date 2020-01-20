@@ -6,6 +6,8 @@ import AuthWindow from "./src/components/AuthWindow"
 import MainMenu from "./src/components/MainMenu"
 import FaceScan from "./src/components/FaceScan"
 import ThumbScan from "./src/components/ThumbScan"
+import * as LocalAuthentication from 'expo-local-authentication';
+
 
 const Navigator = createStackNavigator({
       'Main Menu':{ 
@@ -29,6 +31,7 @@ const Navigator = createStackNavigator({
 const AppContainer = createAppContainer(Navigator);
 //export default AppContainer;
 export default class Screens extends React.Component {
+  
     render() {
         return <AppContainer />;
     }

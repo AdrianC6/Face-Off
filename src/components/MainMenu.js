@@ -1,14 +1,35 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, Button, Image, Alert } from 'react-native';
 import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack"
+import { createStackNavigator } from "react-navigation-stack";
+import * as LocalAuthentication from 'expo-local-authentication';
+
 //import AuthWindow from "./src/components/AuthWindow"
 
 export default class MainMenu extends Component {
     constructor(props){
       super(props);
-      this.state ={};
+      this.state ={
+            authMethod:[],
+            "infoPlist":{
+              "NSFaceIDUsageDescription": "it needs the face scan to authenticate"
+            }
+      };
+      
   }
+
+  componentDidMount(){
+    this._GetAuth();
+  }
+
+  _GetAuth=async()=>{
+    LocalAuthentication.hasHardwareAsync();
+    let AuthMethod = await LocalAuthentication.supportedAuthenticationTypesAsync();
+    console.log(AuthMethod)
+    this.setState({authMethod:AuthMethod});
+    // console.log(this.state.authMethod)
+  }
+
   render(){
   
     return (
@@ -18,7 +39,7 @@ export default class MainMenu extends Component {
          <View style={styles.buttons}>
            <Button 
              title="Auth Page"
-             onPress={() => this.props.navigation.navigate('Auth Window')}
+             onPress={() => this.props.navigation.navigate('Auth Window', this.state)}
          />
          </View>
        </View>

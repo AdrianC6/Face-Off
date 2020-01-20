@@ -24,7 +24,10 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist":{
+        "NSFaceIDUsageDescription": "this app uses the face authenticator to sign in"
+      }
     }
   }
 }

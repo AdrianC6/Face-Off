@@ -1,9 +1,9 @@
 {
+  "expoServerNgrokUrl": "https://qj-np4.anonymous.face-off.exp.direct",
+  "packagerNgrokUrl": "https://packager.qj-np4.anonymous.face-off.exp.direct",
+  "ngrokPid": 5360,
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 13604,
-  "expoServerNgrokUrl": "https://qj-np4.anonymous.face-off.exp.direct",
-  "packagerNgrokUrl": "https://packager.qj-np4.anonymous.face-off.exp.direct",
-  "ngrokPid": 1864
+  "packagerPid": 11100
 }
