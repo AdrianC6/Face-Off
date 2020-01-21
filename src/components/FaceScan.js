@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, Button, Image, Alert } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, Alert, ScrollView } from 'react-native';
 import * as LocalAuthentication from 'expo-local-authentication';
 
 export default class FaceScan extends Component{
@@ -46,19 +46,21 @@ export default class FaceScan extends Component{
   }
 
   _message=()=>{
-    alert('Fuck you');
+    alert('You are not authenticated');
   }
 
   render(){
   return(
-    <View style={styles.container}>
-      <Text style={{fontSize:25, fontWeight:"bold", padding:10}}>Face Scan Window</Text>
-      <Text style={styles.description}>On this screen you will use the phones integrated face scanning system when prompted so you can gain access to the next page</Text>
-      <Image style={styles.images} source={require('C:\\Users\\Adrian\\Documents\\Face-Off\\Images\\facescan.png')}/>
-      <View style={styles.buttons}>
-        <Button title="Start Scan" onPress={() => this._authenticate()}/>
+    <ScrollView style={styles.scroll}>
+      <View style={styles.container}>
+        <Text style={{fontSize:25, fontWeight:"bold", padding:10}}>Face Scan Window</Text>
+        <Text style={styles.description}>On this screen you will use the phones integrated face scanning system when prompted so you can gain access to the next page</Text>
+        <Image style={styles.images} source={require('C:\\Users\\Adrian\\Documents\\Face-Off\\Images\\facescan.png')}/>
+        <View style={styles.buttons}>
+          <Button title="Start Scan" onPress={() => this._authenticate()}/>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 }
@@ -88,5 +90,9 @@ export default class FaceScan extends Component{
       margin:220,
       height:300,
       width:300
+    },
+    scroll:{
+      backgroundColor: '#259b9a',
+      
     }
   });
