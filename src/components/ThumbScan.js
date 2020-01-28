@@ -28,8 +28,8 @@ export default class ThumbScan extends Component{
       let auth = await LocalAuthentication.authenticateAsync()
       if (auth.success) {
         this.setState({modalVisible: false, authenticated: true, failedAttempt: 0,});
-        alert("you are authenticated");
-        this.props.navigation.navigate('Code')
+        //alert("you are authenticated");
+        this.props.navigation.navigate('Auth Token')
       } else {
         this.setState({failedCount: this.state.failedCount + 1,});
           this._message();
@@ -40,7 +40,7 @@ export default class ThumbScan extends Component{
   }
 
   _message=()=>{
-    alert('You are not authenticated');
+    alert('You are not authenticated‽');
   }
 
   render(){

@@ -12,11 +12,31 @@ export default class Code extends Component {
   }
 
   render(){
-  
     return (
-      <View style={styles.container}>
-         <Text style={{fontSize:25,fontWeight:"bold"}}>Code to Authenticate</Text>
-       </View>
+        <View style={styles.container}>
+            <Text style={{fontSize:25,fontWeight:"bold"}}>Code to Authenticate</Text>
+        </View>
     );
   }
-  }
+}
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#259b9a',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    buttons:{
+      margin: 20,
+      height:40,
+      width:100,
+      backgroundColor: '#f7f7f7',
+      borderRadius:10
+    },
+    images:{
+      height:300,
+      width:300
+    }
+  });
+  
