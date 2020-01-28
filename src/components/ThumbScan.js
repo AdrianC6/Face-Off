@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, Button, Image, Alert, ScrollView } from 'react-native';
 import * as LocalAuthentication from 'expo-local-authentication';
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
 
 export default class ThumbScan extends Component{
   constructor(props){
@@ -27,9 +29,10 @@ export default class ThumbScan extends Component{
       if (auth.success) {
         this.setState({modalVisible: false, authenticated: true, failedAttempt: 0,});
         alert("you are authenticated");
+        this.props.navigation.navigate('Code')
       } else {
         this.setState({failedCount: this.state.failedCount + 1,});
-        this._message();
+          this._message();
       }
     } catch (e) {
       console.log(e);

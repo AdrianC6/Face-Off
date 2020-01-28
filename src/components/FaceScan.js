@@ -36,6 +36,7 @@ export default class FaceScan extends Component{
       if (auth.success) {
         this.setState({modalVisible: false, authenticated: true, failedAttempt: 0,});
         alert("you are authenticated");
+        this.props.navigation.navigate('Code')
       } else {
         this.setState({failedCount: this.state.failedCount + 1,});
         this._message();
@@ -46,7 +47,7 @@ export default class FaceScan extends Component{
   }
 
   _message=()=>{
-    alert('You are not authenticated');
+    alert('fork off m8t');
   }
 
   render(){
