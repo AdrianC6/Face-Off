@@ -7,6 +7,8 @@ import MainMenu from "./src/components/MainMenu"
 import FaceScan from "./src/components/FaceScan"
 import ThumbScan from "./src/components/ThumbScan"
 import Code from "./src/components/Code"
+import CodeGenerator from  "./src/components/CodeGenerator"
+import NewQRScanner from "./src/components/NewQRScanner"
 import * as LocalAuthentication from 'expo-local-authentication';
 
 
@@ -24,7 +26,10 @@ const Navigator = createStackNavigator({
         screen: ThumbScan
       },
       'Auth Token':{
-        screen: Code
+        screen: NewQRScanner
+      },
+      'Code Generator':{
+        screen: CodeGenerator
       }
   }, 
   { 

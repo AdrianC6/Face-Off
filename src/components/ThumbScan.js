@@ -32,7 +32,7 @@ export default class ThumbScan extends Component{
         this.props.navigation.navigate('Auth Token')
       } else {
         this.setState({failedCount: this.state.failedCount + 1,});
-          this._message();
+        this._message();
       }
     } catch (e) {
       console.log(e);

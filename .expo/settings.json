@@ -1,8 +1,8 @@
 {
+  "urlRandomness": "kv-5pp",
   "hostType": "tunnel",
   "lanType": "ip",
   "dev": true,
   "minify": false,
-  "urlRandomness": "qj-np4",
   "https": false
 }

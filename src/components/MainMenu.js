@@ -11,9 +11,9 @@ export default class MainMenu extends Component {
       super(props);
       this.state ={
             authMethod:[],
-            "infoPlist":{
-              "NSFaceIDUsageDescription": "it needs the face scan to authenticate"
-            }
+            // "infoPlist":{
+            //   "NSFaceIDUsageDescription": "it needs the face scan to authenticate"
+            // }
       };
       
   }
